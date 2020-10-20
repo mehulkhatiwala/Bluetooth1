@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "MCWC_Practical_GTU_6B_BT Chat App"

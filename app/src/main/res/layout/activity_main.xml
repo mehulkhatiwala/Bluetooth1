@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/titleApp"
+        android:text="Bluetooth App"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleApp"
+        android:text="Status: "
+        android:textSize="28dp"
+        android:textStyle="bold|italic"
+        android:id="@+id/textViewStatus"
+        android:layout_marginLeft="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/on_Off_btnLinearLayout"
+        android:layout_below="@+id/textViewStatus"
+        android:layout_marginTop="10sp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ON"
+            android:textSize="20sp"
+            android:id="@+id/btnOn"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="OFF"
+            android:textSize="20sp"
+            android:id="@+id/btnOff"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show all Paired Devices"
+        android:textSize="20sp"
+        android:id="@+id/listPairedDevices"
+        android:layout_below="@+id/on_Off_btnLinearLayout"
+        android:layout_marginTop="10sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan for New Devices"
+        android:textSize="20sp"
+        android:id="@+id/scanNewDevices"
+        android:layout_below="@+id/listPairedDevices"
+        android:layout_marginTop="10sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send File via Bluetooth"
+        android:textSize="20sp"
+        android:id="@+id/sendFile"
+        android:layout_below="@+id/scanNewDevices"
+        android:layout_marginTop="10sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listTitle"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/sendFile"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listViewDevices"
+        android:layout_below="@+id/listTitle"/>
+
+
+</RelativeLayout>
